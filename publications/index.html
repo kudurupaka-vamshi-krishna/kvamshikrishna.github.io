@@ -20,7 +20,7 @@
         <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="space-y-2 text-center md:text-left">
                 <span class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-400/30 text-blue-300 text-xs px-3 py-1 rounded-full font-medium">
-                    <i class="fa-solid fa-graduation-cap"></i> Postdoctoral Researcher @ <a href="https://www.iitb.ac.in/" target="_blank" class="underline hover:text-white">IIT Bombay</a>
+                    <i class="fa-solid fa-graduation-cap"></i> Postdoctoral Researcher @ IIT Bombay
                 </span>
                 <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Dr. K. Vamshi Krishna</h1>
                 <p class="text-slate-300 text-base max-w-2xl">Publications & Conference Presentations</p>
@@ -44,17 +44,17 @@
         </div>
     </header>
 
-    <!-- Main Content -->
+    <!-- Content Area -->
     <main class="max-w-6xl mx-auto px-6 py-10 flex-grow w-full space-y-10">
 
-        <!-- Publications Section -->
+        <!-- Publications Section (Populated dynamically from Excel / CSV / Google Sheets) -->
         <div class="bg-white rounded-xl p-8 border border-slate-200/80 shadow-sm space-y-6">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b pb-3 gap-2">
                 <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-3">
                     <i class="fa-solid fa-journal-whills text-blue-600"></i> List of Publications
                 </h2>
                 <span class="text-xs text-slate-500 bg-slate-100 px-3 py-1 rounded-full w-fit">
-                    <i class="fa-solid fa-file-excel text-emerald-600 me-1"></i> Auto-synced from CSV / Excel / Google Sheets
+                    <i class="fa-solid fa-file-excel text-emerald-600 me-1"></i> Auto-synced from Excel / Google Sheets
                 </span>
             </div>
 
@@ -64,31 +64,30 @@
             </div>
         </div>
 
-        <!-- Work In Progress Section -->
         <div class="bg-white rounded-xl p-8 border border-slate-200/80 shadow-sm space-y-6">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b pb-3 gap-2">
                 <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-3">
-                    <i class="fa-solid fa-hourglass-half text-amber-500"></i> Under Review & Work in Progress
+                    <i class="fa-solid fa-journal-whills text-blue-600"></i> Under Review & Work in Progress 
                 </h2>
                 <span class="text-xs text-slate-500 bg-slate-100 px-3 py-1 rounded-full w-fit">
-                    <i class="fa-solid fa-file-excel text-emerald-600 me-1"></i> Auto-synced from CSV / Excel / Google Sheets
+                    <i class="fa-solid fa-file-excel text-emerald-600 me-1"></i> Auto-synced from Excel / Google Sheets
                 </span>
             </div>
 
             <!-- WIP Container -->
             <div id="WorkInProgress-container" class="space-y-4">
-                <p class="text-xs text-slate-400 italic">Loading WIP data...</p>
+                <p class="text-xs text-slate-400 italic">Loading UR&WIP data...</p>
             </div>
         </div>
 
-        <!-- Attended Conferences Section -->
+        <!-- Attended Conferences Section (Populated dynamically from Excel / CSV / Google Sheets) -->
         <div class="bg-white rounded-xl p-8 border border-slate-200/80 shadow-sm space-y-6">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b pb-3 gap-2">
                 <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-3">
                     <i class="fa-solid fa-earth-americas text-blue-600"></i> List of Attended Conferences
                 </h2>
                 <span class="text-xs text-slate-500 bg-slate-100 px-3 py-1 rounded-full w-fit">
-                    <i class="fa-solid fa-file-excel text-emerald-600 me-1"></i> Auto-synced from CSV / Excel / Google Sheets
+                    <i class="fa-solid fa-file-excel text-emerald-600 me-1"></i> Auto-synced from Excel / Google Sheets
                 </span>
             </div>
 
@@ -107,175 +106,53 @@
         </div>
     </footer>
 
-    <!-- CSV Parser Script targeting data/ (no underscore) -->
+    <!-- CSV / Excel Parsing & Rendering Script -->
     <script>
+        // CONFIGURATION: Set your Google Sheet CSV URL or local CSV path
+        // To use Google Sheets Live Sync: Set URL to 'https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/gviz/tq?tqx=out:csv'
         const PUBLICATIONS_CSV_URL = '../data/publications.csv';
         const WorkInProgress_CSV_URL = '../data/WorkInProgress.csv';
         const CONFERENCES_CSV_URL = '../data/conferences.csv';
 
-        // Local Fallback Data
-        const FALLBACK_PUBLICATIONS = [
-            {
-                Type: "Journal",
-                Title: "Estimating Situational Awareness and Predicting Gaze Allocation Strategies of Pedestrians using Markov Model",
-                Authors: "Krishna, K. V., & Choudhary, P.",
-                Journal_Conference: "Transportation Research Record: Journal of the TRB",
-                Year: "2026",
-                Volume_Pages: "In Press",
-                DOI_URL: "https://doi.org/10.1177/03611981251410917",
-                Status: "In Press"
-            },
-            {
-                Type: "Journal",
-                Title: "Does Listening to Music Impact Pedestrian Safety while Crossing the Road? Investigating using the VR Approach",
-                Authors: "Krishna, K. V., & Choudhary, P.",
-                Journal_Conference: "Transportation Research Part F: Traffic Psychology and Behaviour",
-                Year: "2025",
-                Volume_Pages: "Vol 111 (162-176)",
-                DOI_URL: "https://doi.org/10.1016/j.trf.2025.03.001",
-                Status: "Published"
-            },
-            {
-                Type: "Journal",
-                Title: "Unravelling situational awareness of multi-tasking pedestrians through average gaze fixation durations: An accelerated failure time modelling approach",
-                Authors: "Krishna, K. V., & Choudhary, P.",
-                Journal_Conference: "Accident Analysis & Prevention",
-                Year: "2025",
-                Volume_Pages: "Vol 211 (107912)",
-                DOI_URL: "https://doi.org/10.1016/j.aap.2024.107912",
-                Status: "Published"
-            },
-            {
-                Type: "Journal",
-                Title: "Understanding distracted pedestrians risky behaviour: The role of walking and visual characteristics through a field study",
-                Authors: "Krishna, K. V., Kapruwan, R., & Choudhary, P.",
-                Journal_Conference: "Transportation Research Part F: Traffic Psychology and Behaviour",
-                Year: "2024",
-                Volume_Pages: "Vol 101 (111-129)",
-                DOI_URL: "https://doi.org/10.1016/j.trf.2024.01.003",
-                Status: "Published"
-            }
-        ];
-
-        const FALLBACK_WIP = [
-            {
-                Title: "Evaluating the Risky Behaviour of Distracted Pedestrians using an Interpretable Machine Learning Approach",
-                Authors: "Krishna, K. V., & Choudhary, P.",
-                Status: "In Pipeline"
-            },
-            {
-                Title: "Unveiling the Effectiveness of Countermeasures to Alert Distracted Pedestrians",
-                Authors: "Krishna, K. V., & Choudhary, P.",
-                Status: "In Pipeline"
-            },
-            {
-                Title: "Effect of Haptic Watch on Risky Behaviour of Pedestrians: Co-Simulation Environment Testing Strategy",
-                Authors: "Surya, C. S., Krishna, K. V., Choudhary, P., & Atreya, S.",
-                Status: "In Pipeline"
-            },
-            {
-                Title: "An Automated Gaze Fixation Mapping Algorithm using Computer Vision Technique",
-                Authors: "Krishna, K. V., Singh, P., Rudra, V., & Choudhary, P.",
-                Status: "In Pipeline"
-            },
-            {
-                Title: "An end-to-end Software Tool for Obtaining Gaze Evaluation Metrics for Pupil Core Eye Tracker",
-                Authors: "Krishna, K. V., Vanshmeet, K., Jain, V., & Choudhary, P.",
-                Status: "In Pipeline"
-            }
-        ];
-
-        const FALLBACK_CONFERENCES = [
-            {
-                Title: "Can an external Human Machine Interface (eHMI) alleviate risky crossing behaviors?",
-                Authors: "Krishna, K. V. et al.",
-                Conference: "AutoUI 2026",
-                Location: "Gothenburg Sweden",
-                Year: "2026",
-                Status: "Under Review"
-            },
-            {
-                Title: "3 Accepted Papers on Survival Analysis and Glancing Behavior",
-                Authors: "Krishna, K. V., & Choudhary, P.",
-                Conference: "TIPCE 2025",
-                Location: "Roorkee India",
-                Year: "2025",
-                Status: "Accepted"
-            },
-            {
-                Title: "Risky Behaviour of Distracted Pedestrians Using Interpretable ML",
-                Authors: "Krishna, K. V., & Choudhary, P.",
-                Conference: "EURO-TAP 2025",
-                Location: "Munich Germany",
-                Year: "2025",
-                Status: "Submitted"
-            },
-            {
-                Title: "5 Accepted Presentations on Illuminated Crosswalks & Haptic Watches",
-                Authors: "Surya, C. S. et al.",
-                Conference: "WCTRS 2026",
-                Location: "Toulouse France",
-                Year: "2026",
-                Status: "Accepted"
-            },
-            {
-                Title: "Markov Entropy Modelling & Pupil Core Eye Tracking Software",
-                Authors: "Krishna, K. V., & Choudhary, P.",
-                Conference: "ICTCT 2025",
-                Location: "Berlin Germany",
-                Year: "2025",
-                Status: "Presented"
-            }
-        ];
-
+        // Load Publications CSV
         Papa.parse(PUBLICATIONS_CSV_URL, {
             download: true,
             header: true,
             skipEmptyLines: true,
             complete: function(results) {
-                if(results.data && results.data.length > 0) {
-                    renderPublications(results.data);
-                } else {
-                    renderPublications(FALLBACK_PUBLICATIONS);
-                }
+                renderPublications(results.data);
             },
             error: function(err) {
-                console.warn("CSV fetch fallback used:", err);
-                renderPublications(FALLBACK_PUBLICATIONS);
+                console.error("Error loading publications CSV:", err);
+                document.getElementById('publications-container').innerHTML = '<p class="text-xs text-red-500">Error loading publications data file.</p>';
             }
         });
 
+        // Load Under Review or Work In Progress CSV
         Papa.parse(WorkInProgress_CSV_URL, {
             download: true,
             header: true,
             skipEmptyLines: true,
             complete: function(results) {
-                if(results.data && results.data.length > 0) {
-                    renderWorkInProgress(results.data);
-                } else {
-                    renderWorkInProgress(FALLBACK_WIP);
-                }
+                renderWorkInProgress(results.data);
             },
             error: function(err) {
-                console.warn("CSV fetch fallback used:", err);
-                renderWorkInProgress(FALLBACK_WIP);
+                console.error("Error loading WIP CSV:", err);
+                document.getElementById('WorkInProgress-container').innerHTML = '<p class="text-xs text-red-500">Error loading Work in Progress data file.</p>';
             }
         });
 
+        // Load Conferences CSV
         Papa.parse(CONFERENCES_CSV_URL, {
             download: true,
             header: true,
             skipEmptyLines: true,
             complete: function(results) {
-                if(results.data && results.data.length > 0) {
-                    renderConferences(results.data);
-                } else {
-                    renderConferences(FALLBACK_CONFERENCES);
-                }
+                renderConferences(results.data);
             },
             error: function(err) {
-                console.warn("CSV fetch fallback used:", err);
-                renderConferences(FALLBACK_CONFERENCES);
+                console.error("Error loading conferences CSV:", err);
+                document.getElementById('conferences-container').innerHTML = '<p class="text-xs text-red-500">Error loading conferences data file.</p>';
             }
         });
 
@@ -289,47 +166,20 @@
             }
 
             data.forEach(item => {
-                const status = (item.Status || '').trim();
-                const isPublished = status === 'Published' || status === 'In Press';
-                const badgeColor = isPublished ? 'text-emerald-700 bg-emerald-50 border-emerald-200' : 'text-amber-700 bg-amber-50 border-amber-200';
+                const badgeColor = item.Status === 'Published' || item.Status === 'In Press' ? 'text-emerald-700 bg-emerald-50 border-emerald-200' : 'text-amber-700 bg-amber-50 border-amber-200';
                 
-                const journalVal = (item.Journal_Conference || '').trim();
-                const yearVal = (item.Year || '').trim();
-
-                let badgeText = status || 'Journal';
-                if (journalVal !== '' && journalVal !== '-') {
-                    const yearStr = (yearVal !== '' && yearVal !== '-') ? ` (${yearVal})` : '';
-                    const statusStr = status !== '' ? ` — ${status}` : '';
-                    badgeText = `${journalVal}${yearStr}${statusStr}`;
-                } else if (status !== '') {
-                    badgeText = status;
-                }
-
-                let subtitleParts = [];
-                const authorsVal = (item.Authors || '').trim();
-                const volPagesVal = (item.Volume_Pages || '').trim();
-
-                if (authorsVal !== '' && authorsVal !== '-') subtitleParts.push(authorsVal);
-                if (journalVal !== '' && journalVal !== '-') subtitleParts.push(`<em>${journalVal}</em>`);
-                if (volPagesVal !== '' && volPagesVal !== '-') subtitleParts.push(volPagesVal);
-                
-                const subtitleText = subtitleParts.join(' — ');
-
                 let doiLink = '';
-                const doiVal = (item.DOI_URL || '').trim();
-                if (doiVal !== '' && doiVal !== '-') {
-                    doiLink = `<a href="${doiVal}" target="_blank" class="inline-flex items-center gap-1 text-xs text-blue-600 hover:underline mt-2 font-medium">
+                if(item.DOI_URL && item.DOI_URL !== '-' && item.DOI_URL.trim() !== '') {
+                    doiLink = `<a href="${item.DOI_URL}" target="_blank" class="inline-flex items-center gap-1 text-xs text-blue-600 hover:underline mt-2 font-medium">
                         <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Link / DOI
                     </a>`;
                 }
 
-                let cleanTitle = (item.Title || '').replace(//g, '-');
-
                 const card = `
                 <div class="p-4 rounded-lg border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-sm transition">
-                    <span class="text-xs font-bold ${badgeColor} border px-2.5 py-0.5 rounded-full inline-block">${badgeText}</span>
-                    <p class="font-semibold text-slate-900 text-base mt-2">${cleanTitle}</p>
-                    ${subtitleText ? `<p class="text-xs text-slate-600 mt-1">${subtitleText}</p>` : ''}
+                    <span class="text-xs font-bold ${badgeColor} border px-2 py-0.5 rounded">${item.Journal_Conference || 'Journal'} (${item.Year || ''}) — ${item.Status || ''}</span>
+                    <p class="font-semibold text-slate-900 text-base mt-2">${item.Title || ''}</p>
+                    <p class="text-xs text-slate-600 mt-1">${item.Authors || ''} — <em>${item.Journal_Conference || ''}</em> ${item.Volume_Pages ? ', ' + item.Volume_Pages : ''}</p>
                     ${doiLink}
                 </div>`;
                 container.innerHTML += card;
@@ -352,12 +202,14 @@
                 const journalVal = (item.Journal_Conference || '').trim();
                 const yearVal = (item.Year || '').trim();
 
+                // If Journal_Conference is not specified, display ONLY the Status ("In Pipeline")
                 let badgeText = status;
                 if (journalVal !== '' && journalVal !== '-') {
                     const yearStr = (yearVal !== '' && yearVal !== '-') ? ` (${yearVal})` : '';
                     badgeText = `${journalVal}${yearStr} — ${status}`;
                 }
 
+                // Build clean subtitle (Authors only, no trailing dashes or commas)
                 let subtitleParts = [];
                 const authorsVal = (item.Authors || '').trim();
                 const volPagesVal = (item.Volume_Pages || '').trim();
@@ -368,7 +220,13 @@
                 
                 const subtitleText = subtitleParts.join(' — ');
 
-                let cleanTitle = (item.Title || '').replace(//g, '-');
+                // Clean up common character encoding artifacts in Title
+                // Replace Unicode replacement char and common smart quotes/dashes with plain equivalents
+                let cleanTitle = (item.Title || '')
+                    .replace(/\uFFFD/g, '-')
+                    .replace(/[\u2018\u2019]/g, "'")
+                    .replace(/[\u201C\u201D]/g, '"')
+                    .replace(/[\u2013\u2014]/g, '-');
 
                 const card = `
                 <div class="p-4 rounded-lg border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-sm transition">
@@ -390,14 +248,13 @@
             }
 
             data.forEach(item => {
-                let cleanTitle = (item.Title || '').replace(//g, '-');
                 const card = `
                 <div class="p-4 bg-slate-50 rounded-lg border border-slate-200 text-xs">
                     <div class="flex items-center justify-between mb-1">
                         <span class="font-bold text-blue-800">${item.Conference || ''}</span>
                         <span class="bg-blue-100 text-blue-800 text-[10px] px-2 py-0.5 rounded font-semibold">${item.Status || 'Attended'}</span>
                     </div>
-                    <p class="font-semibold text-slate-900 text-sm">${cleanTitle}</p>
+                    <p class="font-semibold text-slate-900 text-sm">${item.Title || ''}</p>
                     <p class="text-slate-500 mt-1">${item.Authors || ''} | ${item.Location || ''} (${item.Year || ''})</p>
                 </div>`;
                 container.innerHTML += card;
