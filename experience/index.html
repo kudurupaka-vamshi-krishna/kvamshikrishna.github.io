@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experience & Education | Dr. K. Vamshi Krishna</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>body { font-family: 'Inter', sans-serif; } .nav-active { border-bottom: 3px solid #2563eb; color: #1d4ed8; font-weight: 600; }</style>
 </head>
 <body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+    
+    <!-- Header Banner -->
     <header class="bg-gradient-to-r from-slate-900 via-slate-800 to-indigo-950 text-white shadow-lg">
         <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="space-y-2 text-center md:text-left">
@@ -36,79 +40,143 @@
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 py-10 flex-grow w-full space-y-8">
+    <main class="max-w-6xl mx-auto px-6 py-10 flex-grow w-full space-y-10">
+
+        <!-- Experience & Education Card Group -->
         <div class="bg-white rounded-xl p-8 border border-slate-200/80 shadow-sm space-y-6">
-            <h2 class="text-2xl font-bold text-slate-900 border-b pb-3 flex items-center gap-3"><i class="fa-solid fa-user-tie text-blue-600"></i> Work Experience</h2>
-            <div class="space-y-6 relative border-l-2 border-slate-200 pl-6 ml-2">
-                <div class="relative">
-                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow"></div>
-                    <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full">2026 – Present </span>
-                    <h3 class="text-lg font-bold text-slate-900 mt-1">Domain Expert</h3>
-                    <p class="text-sm font-medium text-slate-600"><a href="https://viswire.com/" target="_blank" class="text-blue-600 font-semibold hover:underline">Viswire Simulation and Training Pvt. Ltd., Chennai, Tamil Nadu, India</a></p>
-                    <p class="text-xs text-slate-500 mt-1"> <!-- <strong>Focus:</strong> Transportation Systems Engineering & Human Factors --></p>
+            <h2 class="text-2xl font-bold text-slate-900 border-b pb-3 flex items-center gap-3">
+                <i class="fa-solid fa-briefcase text-blue-600"></i> Work Experience
+            </h2>
+
+          <div class="space-y-4">
+
+                <!-- 1. Domain Expert at Viswire -->
+                <div class="flex items-start gap-4 p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-sm transition">
+                    <div class="w-20 h-20 flex-shrink-0 bg-white p-2 rounded-lg border border-slate-200 shadow-sm flex items-center justify-center">
+                        <img src="../assets/images/viswire_logo.png" alt="Viswire Logo" class="h-full w-full object-contain" >
+                    </div>
+                    <div class="space-y-1">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="text-xs font-semibold text-emerald-800 bg-emerald-100 border border-emerald-200 px-2.5 py-0.5 rounded-full">July 2026 – Present</span>
+                            <span class="text-xs font-medium text-slate-500 bg-slate-200/60 px-2 py-0.5 rounded">Research Grade Simulators Industry</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mt-1">Domain Expert</h3>
+                        <p class="text-sm font-medium text-slate-600"><a href="https://viswire.com/" target="_blank" class="text-blue-600 font-semibold hover:underline">Viswire Simulation and Training Pvt. Ltd., Chennai, Tamil Nadu, India</a></p>
+                        <p class="text-xs text-slate-500 mt-1"> <!-- <strong>Focus:</strong> Transportation Systems Engineering & Human Factors --></p>
+                    </div>
                 </div>
-                
-                <div class="relative">
-                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow"></div>
-                    <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full">2025 – 2026 </span>
-                    <h3 class="text-lg font-bold text-slate-900 mt-1">Institute Postdoctoral Researcher (IPDF)</h3>
-                    <p class="text-sm font-medium text-slate-600"><a href="https://homepages.iitb.ac.in/~archak/index.html" target="_blank" class="text-blue-600 font-semibold hover:underline">CAV Lab</a> Dept. of Civil Engineering</p>
-                    <p class="text-sm font-medium text-slate-600"><a href="https://www.iitb.ac.in/" target="_blank" class="text-blue-600 font-semibold hover:underline">Indian Institute of Technology Bombay, Mumbai, Maharashtra, India</a></p>
-                    <p class="text-xs text-slate-500 mt-1"> <!--<strong>Focus:</strong> Transportation Systems Engineering & Human Factors--> </p>
-                </div>
-            </div>
+
+                <!-- 2. Postdoc at IIT Bombay -->
+                <div class="flex items-start gap-4 p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-sm transition">
+                    <div class="w-20 h-20 flex-shrink-0 bg-white p-2 rounded-lg border border-slate-200 shadow-sm flex items-center justify-center">
+                        <img src="../assets/images/iitb_logo.png" alt="IIT Bombay Logo" class="h-full w-full object-contain" >
+                    </div>
+                    <div class="space-y-1">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="text-xs font-semibold text-emerald-800 bg-emerald-100 border border-emerald-200 px-2.5 py-0.5 rounded-full">Oct 2025 – July 2026</span>
+                            <span class="text-xs font-medium text-slate-500 bg-slate-200/60 px-2 py-0.5 rounded">Postdoctoral Fellowship</span>
+                        </div>
+                        <h3 class="text-base sm:text-lg font-bold text-slate-900 mt-1">Institute Postdoctoral Researcher (IPDF)</h3>
+                        <p class="text-sm font-medium text-slate-600"><a href="https://homepages.iitb.ac.in/~archak/index.html" target="_blank" class="text-blue-600 font-semibold hover:underline">CAV Lab</a> Dept. of Civil Engineering</p>
+                        <p class="text-sm font-medium text-slate-600"><a href="https://www.iitb.ac.in/" target="_blank" class="text-blue-600 font-semibold hover:underline">Indian Institute of Technology Bombay, Mumbai, Maharashtra, India</a></p>
+                        <p class="text-xs text-slate-500 mt-1"> <!--<strong>Focus:</strong> Transportation Systems Engineering & Human Factors--> </p>
+                    </div>
+                </div>  
+
         </div>
     </main>
 
-    <main class="max-w-6xl mx-auto px-6 py-10 flex-grow w-full space-y-8">
+
+    <main class="max-w-6xl mx-auto px-6 py-10 flex-grow w-full space-y-10">
+
+        <!-- Experience & Education Card Group -->
         <div class="bg-white rounded-xl p-8 border border-slate-200/80 shadow-sm space-y-6">
-            <h2 class="text-2xl font-bold text-slate-900 border-b pb-3 flex items-center gap-3"><i class="fa-solid fa-graduation-cap text-blue-600"></i> Educational Background</h2>
-            <div class="space-y-6 relative border-l-2 border-slate-200 pl-6 ml-2">
-                <div class="relative">
-                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow"></div>
-                    <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full">2020 – 2025</span>
-                    <h3 class="text-lg font-bold text-slate-900 mt-1">Ph.D. in Transportation Engineering</h3>
-                    <p class="text-sm font-medium text-slate-600"><a href="https://choudharypushpa.github.io/HumanFRSTLab/pages/team/faculty/pushpa.html" target="_blank" class="text-blue-600 font-semibold hover:underline"> <strong>Advisor:</strong> Prof. Pushpa Choudhary</a>, HumanFRST Group </p>
-                    <p class="text-sm font-medium text-slate-600">Transportation Engineering Group, Dept. of Civil Engineering</p>
-                    <p class="text-sm font-medium text-slate-600"><a href="https://civil.iitr.ac.in/TEG/About.aspx" target="_blank" class="text-blue-600 font-semibold hover:underline">Indian Institute of Technology Roorkee, Uttarakhand, India</a></p>
-                    <p class="text-sm font-medium text-slate-600"><strong>Thesis:</strong> Behavioral Assessment of Distracted Pedestrians at Intersections</p>
+            <h2 class="text-2xl font-bold text-slate-900 border-b pb-3 flex items-center gap-3">
+                <i class="fa-solid fa-graduation-cap text-blue-600"></i> Academic Qualifications
+            </h2>
+
+          <div class="space-y-4">
+
+                <!-- Ph.D. at IIT Roorkee -->
+                <div class="flex items-start gap-4 p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-sm transition">
+                    <div class="w-20 h-20 flex-shrink-0 bg-white p-2 rounded-lg border border-slate-200 shadow-sm flex items-center justify-center">
+                        <img src="../assets/images/iitr_logo.png" alt="IIT Roorkee Logo" class="h-full w-full object-contain" >
+                    </div>
+                    <div class="space-y-1">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="text-xs font-semibold text-emerald-800 bg-emerald-100 border border-emerald-200 px-2.5 py-0.5 rounded-full">Aug 2020 – Dec 2025</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mt-1">Ph.D. in Transportation Engineering</h3>
+                        <p class="text-sm font-medium text-slate-600"><a href="https://choudharypushpa.github.io/HumanFRSTLab/pages/team/faculty/pushpa.html" target="_blank" class="text-blue-600 font-semibold hover:underline"> <strong>Advisor:</strong> Prof. Pushpa Choudhary</a>, HumanFRST Group </p>
+                        <p class="text-sm font-medium text-slate-600">Transportation Engineering Group, Dept. of Civil Engineering</p>
+                        <p class="text-sm font-medium text-slate-600"><a href="https://civil.iitr.ac.in/TEG/About.aspx" target="_blank" class="text-blue-600 font-semibold hover:underline">Indian Institute of Technology Roorkee, Uttarakhand, India</a></p>
+                        <p class="text-sm font-medium text-slate-600"><strong>Thesis:</strong> Behavioral Assessment of Distracted Pedestrians at Intersections</p>
+                    </div>
                 </div>
 
-                <div class="relative">
-                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow"></div>
-                    <span class="text-xs font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-full">2018 – 2020</span>
-                    <h3 class="text-lg font-bold text-slate-900 mt-1">M.Tech in Transportation Engineering</h3>
-                    <p class="text-sm font-medium text-slate-600"><a href="https://www.nitrkl.ac.in/CE/~bhuyanp/" target="_blank" class="text-blue-600 font-semibold hover:underline"> <strong>Advisor:</strong> Prof. Prasanta Kumar Bhuyan</a></p>
-                    <p class="text-sm font-medium text-slate-600">Transportation Engineering, Dept. of Civil Engineering</p>
-                    <p class="text-sm font-medium text-slate-600"><a href="https://www.nitrkl.ac.in/CE/" target="_blank" class="text-blue-600 font-semibold hover:underline">National Institute of Technology Rourkela, Odisha, India</a></p>
-                    <p class="text-sm font-medium text-slate-600"><strong>Thesis:</strong> Analysing Lateral Gap Behavior of Two Wheelers in Heterogeneous Traffic Stream</p>
+                <!-- 2. M.Tech at NIT Rourkela -->
+                <div class="flex items-start gap-4 p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-sm transition">
+                    <div class="w-20 h-20 flex-shrink-0 bg-white p-2 rounded-lg border border-slate-200 shadow-sm flex items-center justify-center">
+                        <img src="../assets/images/nitr_logo.png" alt="NIT Rourkela Logo" class="h-full w-full object-contain" >
+                    </div>
+                    <div class="space-y-1">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="text-xs font-semibold text-emerald-800 bg-emerald-100 border border-emerald-200 px-2.5 py-0.5 rounded-full">2018 – 2020</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mt-1">Master of Technology in Transportation Engineering</h3>
+                        <p class="text-sm font-medium text-slate-600"><a href="https://www.nitrkl.ac.in/CE/~bhuyanp/" target="_blank" class="text-blue-600 font-semibold hover:underline"> <strong>Advisor:</strong> Prof. Prasanta Kumar Bhuyan</a></p>
+                        <p class="text-sm font-medium text-slate-600">Transportation Engineering, Dept. of Civil Engineering</p>
+                        <p class="text-sm font-medium text-slate-600"><a href="https://www.nitrkl.ac.in/CE/" target="_blank" class="text-blue-600 font-semibold hover:underline">National Institute of Technology Rourkela, Odisha, India</a></p>
+                        <p class="text-sm font-medium text-slate-600"><strong>Thesis:</strong> Analysing Lateral Gap Behavior of Two Wheelers in Heterogeneous Traffic Stream</p>
+                    </div>
+                </div>  
+
+                <!-- 3. B.Tech at GGV Bilaspur -->
+                <div class="flex items-start gap-4 p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-sm transition">
+                    <div class="w-20 h-20 flex-shrink-0 bg-white p-2 rounded-lg border border-slate-200 shadow-sm flex items-center justify-center">
+                        <img src="../assets/images/ggv_logo.png" alt="GGV Bilaspur Logo" class="h-full w-full object-contain" >
+                    </div>
+                    <div class="space-y-1">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="text-xs font-semibold text-emerald-800 bg-emerald-100 border border-emerald-200 px-2.5 py-0.5 rounded-full">2014 – 2018</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mt-1">Bachelor of Technology in Civil Engineering</h3>
+                        <p class="text-sm font-medium text-slate-600">Dept. of Civil Engineering</p>
+                        <p class="text-sm font-medium text-slate-600"><a href="https://ggu.ac.in/index/" target="_blank" class="text-blue-600 font-semibold hover:underline">Guru Ghasidas Vishwavidyalaya (GGV Central University), Bilaspur, Chattisgarh, India</a></p>
+                        <p class="text-sm font-medium text-slate-600"><strong>Thesis:</strong> An Experimental Study on Fly Ash Based Geopolymer Concrete</p>
+                    </div>
                 </div>
 
-                <div class="relative">
-                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-300 border-4 border-white"></div>
-                    <span class="text-xs font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-full">2014 – 2018</span>
-                    <h3 class="text-lg font-bold text-slate-900 mt-1">B.Tech</h3>
-                    <p class="text-sm font-medium text-slate-600">Dept. of Civil Engineering</p>
-                    <p class="text-sm font-medium text-slate-600"><a href="https://ggu.ac.in/index/" target="_blank" class="text-blue-600 font-semibold hover:underline">Guru Ghasidas Vishwavidyalaya (GGV Central University), Bilaspur, Chattisgarh, India</a></p>
-                    <p class="text-sm font-medium text-slate-600"><strong>Thesis:</strong> An Experimental Study on Fly Ash Based Geopolymer Concrete</p>
-                </div>
 
-                <div class="relative">
-                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-300 border-4 border-white"></div>
-                    <span class="text-xs font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-full">2012 – 2014</span>
-                    <h3 class="text-lg font-bold text-slate-900 mt-1">Intermediate</h3>
-                    <p class="text-sm font-medium text-slate-600">Maths, Physics and Chemistry</a></p>
-                    <p class="text-sm font-medium text-slate-600">Narayana Junior college, Hyderabad, Telangana, India</a></p>
-                </div>
-
-                <div class="relative">
-                    <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-300 border-4 border-white"></div>
-                    <span class="text-xs font-semibold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-full">2012</span>
-                    <h3 class="text-lg font-bold text-slate-900 mt-1">Matriculation</h3>
-                    <p class="text-sm font-medium text-slate-600">Anjali High School, Suryapet, Telangana, India</a></p>
+                <!-- 4. Intermediate at Narayana Junior College -->
+                <div class="flex items-start gap-4 p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-sm transition">
+                    <div class="w-20 h-20 flex-shrink-0 bg-white p-2 rounded-lg border border-slate-200 shadow-sm flex items-center justify-center">
+                        <img src="../assets/images/narayana_logo.png" alt="Narayana Junior College Logo" class="h-full w-full object-contain" >
+                    </div>
+                    <div class="space-y-1">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="text-xs font-semibold text-emerald-800 bg-emerald-100 border border-emerald-200 px-2.5 py-0.5 rounded-full">2012 – 2014</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mt-1">Intermediate</h3>
+                        <p class="text-sm font-medium text-slate-600">Maths, Physics and Chemistry</a></p>
+                        <p class="text-sm font-medium text-slate-600">Narayana Junior college, Hyderabad, Telangana, India</a></p>                        
+                    </div>
                 </div>
                 
-            </div>
+                <!-- 5. Matriculation at Anjali High School -->
+                <div class="flex items-start gap-4 p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-sm transition">
+                    <div class="w-20 h-20 flex-shrink-0 bg-white p-2 rounded-lg border border-slate-200 shadow-sm flex items-center justify-center">
+                        <img src="../assets/images/anjali_logo.png" alt="Anjali High School Logo" class="h-full w-full object-contain" >
+                    </div>
+                    <div class="space-y-1">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="text-xs font-semibold text-emerald-800 bg-emerald-100 border border-emerald-200 px-2.5 py-0.5 rounded-full">2012 </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mt-1">Matriculation</h3>
+                    <p class="text-sm font-medium text-slate-600">Anjali High School, Suryapet, Telangana, India</a></p>                       
+                    </div>
+                </div>
+
         </div>
     </main>
 
