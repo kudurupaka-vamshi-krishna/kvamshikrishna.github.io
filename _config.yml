@@ -1,0 +1,28 @@
+# Site Configuration
+title: "Dr. K. Vamshi Krishna"
+subtitle: "Postdoctoral Researcher | Transportation Systems Engineering"
+description: "Academic & Research Profile of Dr. K. Vamshi Krishna, IIT Bombay"
+url: "https://kvamshikrishna.github.io"
+baseurl: ""
+
+# Author Info
+author:
+  name: "Dr. K. Vamshi Krishna"
+  title: "Institute Postdoctoral Researcher"
+  institution: "Indian Institute of Technology Bombay (IITB)"
+  department: "Transportation Systems Engineering, Department of Civil Engineering"
+  location: "Powai, Mumbai, Maharashtra, India - 400076"
+  email: "kv_krishna@iitb.ac.in"
+  alt_email: "vamshikrishnakudurupaka@gmail.com"
+  phone: "+91 82510 78831"
+  google_scholar: "https://scholar.google.com"
+  orcid: "https://orcid.org"
+  github: "https://github.com/kvamshikrishna"
+  linkedin: "https://linkedin.com/in/kvamshikrishna"
+
+# Build Settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

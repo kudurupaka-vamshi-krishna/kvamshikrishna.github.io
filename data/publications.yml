@@ -1,0 +1,79 @@
+journals:
+  - title: "Estimating Situational Awareness and Predicting Gaze Allocation Strategies of Pedestrians using Markov Model"
+    authors: "Krishna, K. V., & Choudhary, P."
+    journal: "Transportation Research Record: Journal of the Transportation Research Board"
+    year: "2026"
+    status: "In Press"
+    doi: "https://doi.org/10.1177/03611981251410917"
+
+  - title: "Does Listening to Music Impact Pedestrian Safety while Crossing the Road? Investigating using the VR Approach"
+    authors: "Krishna, K. V., & Choudhary, P."
+    journal: "Transportation Research Part F: Traffic Psychology and Behaviour"
+    year: "2025"
+    volume: "111"
+    pages: "162–176"
+    doi: "https://doi.org/10.1016/j.trf.2025.03.001"
+
+  - title: "Unravelling situational awareness of multi-tasking pedestrians through average gaze fixation durations: An accelerated failure time modelling approach"
+    authors: "Krishna, K. V., & Choudhary, P."
+    journal: "Accident Analysis & Prevention"
+    year: "2025"
+    volume: "211"
+    pages: "107912"
+    doi: "https://doi.org/10.1016/j.aap.2024.107912"
+
+  - title: "Understanding distracted pedestrians' risky behaviour: The role of walking and visual characteristics through a field study"
+    authors: "Krishna, K. V., Kapruwan, R., & Choudhary, P."
+    journal: "Transportation Research Part F: Traffic Psychology and Behaviour"
+    year: "2024"
+    volume: "101"
+    pages: "111–129"
+    doi: "https://doi.org/10.1016/j.trf.2024.01.003"
+
+pipeline_papers:
+  - title: "Evaluating the Risky Behaviour of Distracted Pedestrians using an Interpretable Machine Learning Approach"
+    authors: "Krishna, K. V., & Choudhary, P."
+    status: "Under Review"
+
+  - title: "An Automated Gaze Fixation Mapping Algorithm using Computer Vision Technique"
+    authors: "Krishna, K. V., Singh, P., Rudra, V., & Choudhary, P."
+    status: "In Pipeline"
+
+  - title: "An end-to-end Software Tool for Obtaining Gaze Evaluation Metrics for Pupil Core Eye Tracker"
+    authors: "Krishna, K. V., Vanshmeet, K., Jain, V., & Choudhary, P."
+    status: "In Pipeline"
+
+  - title: "Evaluating Risk Compensative Behaviours Adopted by Distracted Pedestrians at Signalized Intersections"
+    authors: "Krishna, K. V., Annapurna, N., & Choudhary, P."
+    status: "In Pipeline"
+
+conferences:
+  - title: "Can an external Human Machine Interface (eHMI) alleviate the risky crossing behaviors of pedestrians: A Co-Simulation Environment Testing Strategy?"
+    authors: "Krishna, K. V. et al."
+    conference: "18th International ACM Conference on Automotive User Interfaces and Interactive Vehicular Applications (AutoUI 2026)"
+    location: "Gothenburg, Sweden"
+    year: "Sept 2026"
+
+  - title: "Risky Behaviour of Distracted Pedestrians Using Interpretable Machine Learning Approach"
+    authors: "Krishna, K. V. and Choudhary, P."
+    conference: "13th Symposium of the European Association for Research in Transportation (EURO-TAP 2025)"
+    location: "Munich, Germany"
+    year: "June 2025"
+
+  - title: "Modeling & Evaluation of Distracted Pedestrians (3 Accepted Papers)"
+    authors: "Krishna, K. V. and Choudhary, P."
+    conference: "3rd International Conference Transportation Infrastructure Projects: Conception to Execution (TIPCE 2025)"
+    location: "Roorkee, India"
+    year: "Sept 2025"
+
+  - title: "Effect of Illuminated Crosswalk on Temporal Compliance Behavior of Pedestrians: A Connected Simulator Study"
+    authors: "Surya, C. S. et al."
+    conference: "17th World Conference on Transport Research Society (WCTRS 2026)"
+    location: "Toulouse, France"
+    year: "July 2026"
+
+  - title: "Examining the variations in situational awareness of impaired pedestrians using Markov Entropy modelling"
+    authors: "Krishna, K. V., & Choudhary, P."
+    conference: "37th International Co-operation on Theories and Concepts in Traffic safety (ICTCT 2025)"
+    location: "Berlin, Germany"
+    year: "Oct 2025"

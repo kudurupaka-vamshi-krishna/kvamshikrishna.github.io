@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications & Conferences | Dr. K. Vamshi Krishna</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- PapaParse CSV Parser -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Inter', sans-serif; } .nav-active { border-bottom: 3px solid #2563eb; color: #1d4ed8; font-weight: 600; }</style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-slate-900 via-slate-800 to-indigo-950 text-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="space-y-2 text-center md:text-left">
+                <span class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-400/30 text-blue-300 text-xs px-3 py-1 rounded-full font-medium">
+                    <i class="fa-solid fa-graduation-cap"></i> Postdoctoral Researcher @ <a href="https://www.iitb.ac.in/" target="_blank" class="underline hover:text-white">IIT Bombay</a>
+                </span>
+                <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Dr. K. Vamshi Krishna</h1>
+                <p class="text-slate-300 text-base max-w-2xl">Publications & Conference Presentations</p>
+            </div>
+            <div class="flex gap-3">
+                <a href="../contact/index.html" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-lg font-medium text-sm transition shadow"><i class="fa-solid fa-paper-plane me-1"></i> Contact</a>
+            </div>
+        </div>
+        <div class="bg-slate-900/90 backdrop-blur border-t border-slate-800 sticky top-0 z-30">
+            <div class="max-w-6xl mx-auto px-6 overflow-x-auto">
+                <nav class="flex space-x-8 text-sm text-slate-400 font-medium min-w-max">
+                    <a href="../index.html" class="py-4 flex items-center gap-2 transition hover:text-slate-200"><i class="fa-solid fa-user text-xs"></i> About Me</a>
+                    <a href="../research/index.html" class="py-4 flex items-center gap-2 transition hover:text-slate-200"><i class="fa-solid fa-flask text-xs"></i> Research & Patents</a>
+                    <a href="../publications/index.html" class="py-4 flex items-center gap-2 transition nav-active"><i class="fa-solid fa-book-open text-xs"></i> Publications & Talks</a>
+                    <a href="../skills/index.html" class="py-4 flex items-center gap-2 transition hover:text-slate-200"><i class="fa-solid fa-laptop-code text-xs"></i> Skills & Tools</a>
+                    <a href="../experience/index.html" class="py-4 flex items-center gap-2 transition hover:text-slate-200"><i class="fa-solid fa-graduation-cap text-xs"></i> Experience & Education</a>
+                    <a href="../awards/index.html" class="py-4 flex items-center gap-2 transition hover:text-slate-200"><i class="fa-solid fa-award text-xs"></i> Honors & Grants</a>
+                    <a href="../contact/index.html" class="py-4 flex items-center gap-2 transition hover:text-slate-200"><i class="fa-solid fa-address-book text-xs"></i> Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-6 py-10 flex-grow w-full space-y-10">
+
+        <!-- Publications Section -->
+        <div class="bg-white rounded-xl p-8 border border-slate-200/80 shadow-sm space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b pb-3 gap-2">
+                <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-3">
+                    <i class="fa-solid fa-journal-whills text-blue-600"></i> List of Publications
+                </h2>
+                <span class="text-xs text-slate-500 bg-slate-100 px-3 py-1 rounded-full w-fit">
+                    <i class="fa-solid fa-file-excel text-emerald-600 me-1"></i> Auto-synced from CSV / Excel / Google Sheets
+                </span>
+            </div>
+
+            <!-- Publications Container -->
+            <div id="publications-container" class="space-y-4">
+                <p class="text-xs text-slate-400 italic">Loading publications data...</p>
+            </div>
+        </div>
+
+        <!-- Work In Progress Section -->
+        <div class="bg-white rounded-xl p-8 border border-slate-200/80 shadow-sm space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b pb-3 gap-2">
+                <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-3">
+                    <i class="fa-solid fa-hourglass-half text-amber-500"></i> Under Review & Work in Progress
+                </h2>
+                <span class="text-xs text-slate-500 bg-slate-100 px-3 py-1 rounded-full w-fit">
+                    <i class="fa-solid fa-file-excel text-emerald-600 me-1"></i> Auto-synced from CSV / Excel / Google Sheets
+                </span>
+            </div>
+
+            <!-- WIP Container -->
+            <div id="WorkInProgress-container" class="space-y-4">
+                <p class="text-xs text-slate-400 italic">Loading WIP data...</p>
+            </div>
+        </div>
+
+        <!-- Attended Conferences Section -->
+        <div class="bg-white rounded-xl p-8 border border-slate-200/80 shadow-sm space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b pb-3 gap-2">
+                <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-3">
+                    <i class="fa-solid fa-earth-americas text-blue-600"></i> List of Attended Conferences
+                </h2>
+                <span class="text-xs text-slate-500 bg-slate-100 px-3 py-1 rounded-full w-fit">
+                    <i class="fa-solid fa-file-excel text-emerald-600 me-1"></i> Auto-synced from CSV / Excel / Google Sheets
+                </span>
+            </div>
+
+            <!-- Conferences Container -->
+            <div id="conferences-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <p class="text-xs text-slate-400 italic col-span-2">Loading conferences data...</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-8 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p>© 2026 Dr. K. Vamshi Krishna. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- CSV Parser Script targeting data/ (no underscore) -->
+    <script>
+        const PUBLICATIONS_CSV_URL = '../data/publications.csv';
+        const WorkInProgress_CSV_URL = '../data/WorkInProgress.csv';
+        const CONFERENCES_CSV_URL = '../data/conferences.csv';
+
+        // Local Fallback Data
+        const FALLBACK_PUBLICATIONS = [
+            {
+                Type: "Journal",
+                Title: "Estimating Situational Awareness and Predicting Gaze Allocation Strategies of Pedestrians using Markov Model",
+                Authors: "Krishna, K. V., & Choudhary, P.",
+                Journal_Conference: "Transportation Research Record: Journal of the TRB",
+                Year: "2026",
+                Volume_Pages: "In Press",
+                DOI_URL: "https://doi.org/10.1177/03611981251410917",
+                Status: "In Press"
+            },
+            {
+                Type: "Journal",
+                Title: "Does Listening to Music Impact Pedestrian Safety while Crossing the Road? Investigating using the VR Approach",
+                Authors: "Krishna, K. V., & Choudhary, P.",
+                Journal_Conference: "Transportation Research Part F: Traffic Psychology and Behaviour",
+                Year: "2025",
+                Volume_Pages: "Vol 111 (162-176)",
+                DOI_URL: "https://doi.org/10.1016/j.trf.2025.03.001",
+                Status: "Published"
+            },
+            {
+                Type: "Journal",
+                Title: "Unravelling situational awareness of multi-tasking pedestrians through average gaze fixation durations: An accelerated failure time modelling approach",
+                Authors: "Krishna, K. V., & Choudhary, P.",
+                Journal_Conference: "Accident Analysis & Prevention",
+                Year: "2025",
+                Volume_Pages: "Vol 211 (107912)",
+                DOI_URL: "https://doi.org/10.1016/j.aap.2024.107912",
+                Status: "Published"
+            },
+            {
+                Type: "Journal",
+                Title: "Understanding distracted pedestrians risky behaviour: The role of walking and visual characteristics through a field study",
+                Authors: "Krishna, K. V., Kapruwan, R., & Choudhary, P.",
+                Journal_Conference: "Transportation Research Part F: Traffic Psychology and Behaviour",
+                Year: "2024",
+                Volume_Pages: "Vol 101 (111-129)",
+                DOI_URL: "https://doi.org/10.1016/j.trf.2024.01.003",
+                Status: "Published"
+            }
+        ];
+
+        const FALLBACK_WIP = [
+            {
+                Title: "Evaluating the Risky Behaviour of Distracted Pedestrians using an Interpretable Machine Learning Approach",
+                Authors: "Krishna, K. V., & Choudhary, P.",
+                Status: "In Pipeline"
+            },
+            {
+                Title: "Unveiling the Effectiveness of Countermeasures to Alert Distracted Pedestrians",
+                Authors: "Krishna, K. V., & Choudhary, P.",
+                Status: "In Pipeline"
+            },
+            {
+                Title: "Effect of Haptic Watch on Risky Behaviour of Pedestrians: Co-Simulation Environment Testing Strategy",
+                Authors: "Surya, C. S., Krishna, K. V., Choudhary, P., & Atreya, S.",
+                Status: "In Pipeline"
+            },
+            {
+                Title: "An Automated Gaze Fixation Mapping Algorithm using Computer Vision Technique",
+                Authors: "Krishna, K. V., Singh, P., Rudra, V., & Choudhary, P.",
+                Status: "In Pipeline"
+            },
+            {
+                Title: "An end-to-end Software Tool for Obtaining Gaze Evaluation Metrics for Pupil Core Eye Tracker",
+                Authors: "Krishna, K. V., Vanshmeet, K., Jain, V., & Choudhary, P.",
+                Status: "In Pipeline"
+            }
+        ];
+
+        const FALLBACK_CONFERENCES = [
+            {
+                Title: "Can an external Human Machine Interface (eHMI) alleviate risky crossing behaviors?",
+                Authors: "Krishna, K. V. et al.",
+                Conference: "AutoUI 2026",
+                Location: "Gothenburg Sweden",
+                Year: "2026",
+                Status: "Under Review"
+            },
+            {
+                Title: "3 Accepted Papers on Survival Analysis and Glancing Behavior",
+                Authors: "Krishna, K. V., & Choudhary, P.",
+                Conference: "TIPCE 2025",
+                Location: "Roorkee India",
+                Year: "2025",
+                Status: "Accepted"
+            },
+            {
+                Title: "Risky Behaviour of Distracted Pedestrians Using Interpretable ML",
+                Authors: "Krishna, K. V., & Choudhary, P.",
+                Conference: "EURO-TAP 2025",
+                Location: "Munich Germany",
+                Year: "2025",
+                Status: "Submitted"
+            },
+            {
+                Title: "5 Accepted Presentations on Illuminated Crosswalks & Haptic Watches",
+                Authors: "Surya, C. S. et al.",
+                Conference: "WCTRS 2026",
+                Location: "Toulouse France",
+                Year: "2026",
+                Status: "Accepted"
+            },
+            {
+                Title: "Markov Entropy Modelling & Pupil Core Eye Tracking Software",
+                Authors: "Krishna, K. V., & Choudhary, P.",
+                Conference: "ICTCT 2025",
+                Location: "Berlin Germany",
+                Year: "2025",
+                Status: "Presented"
+            }
+        ];
+
+        Papa.parse(PUBLICATIONS_CSV_URL, {
+            download: true,
+            header: true,
+            skipEmptyLines: true,
+            complete: function(results) {
+                if(results.data && results.data.length > 0) {
+                    renderPublications(results.data);
+                } else {
+                    renderPublications(FALLBACK_PUBLICATIONS);
+                }
+            },
+            error: function(err) {
+                console.warn("CSV fetch fallback used:", err);
+                renderPublications(FALLBACK_PUBLICATIONS);
+            }
+        });
+
+        Papa.parse(WorkInProgress_CSV_URL, {
+            download: true,
+            header: true,
+            skipEmptyLines: true,
+            complete: function(results) {
+                if(results.data && results.data.length > 0) {
+                    renderWorkInProgress(results.data);
+                } else {
+                    renderWorkInProgress(FALLBACK_WIP);
+                }
+            },
+            error: function(err) {
+                console.warn("CSV fetch fallback used:", err);
+                renderWorkInProgress(FALLBACK_WIP);
+            }
+        });
+
+        Papa.parse(CONFERENCES_CSV_URL, {
+            download: true,
+            header: true,
+            skipEmptyLines: true,
+            complete: function(results) {
+                if(results.data && results.data.length > 0) {
+                    renderConferences(results.data);
+                } else {
+                    renderConferences(FALLBACK_CONFERENCES);
+                }
+            },
+            error: function(err) {
+                console.warn("CSV fetch fallback used:", err);
+                renderConferences(FALLBACK_CONFERENCES);
+            }
+        });
+
+        function renderPublications(data) {
+            const container = document.getElementById('publications-container');
+            container.innerHTML = '';
+
+            if(!data || data.length === 0) {
+                container.innerHTML = '<p class="text-xs text-slate-400">No publications found.</p>';
+                return;
+            }
+
+            data.forEach(item => {
+                const status = (item.Status || '').trim();
+                const isPublished = status === 'Published' || status === 'In Press';
+                const badgeColor = isPublished ? 'text-emerald-700 bg-emerald-50 border-emerald-200' : 'text-amber-700 bg-amber-50 border-amber-200';
+                
+                const journalVal = (item.Journal_Conference || '').trim();
+                const yearVal = (item.Year || '').trim();
+
+                let badgeText = status || 'Journal';
+                if (journalVal !== '' && journalVal !== '-') {
+                    const yearStr = (yearVal !== '' && yearVal !== '-') ? ` (${yearVal})` : '';
+                    const statusStr = status !== '' ? ` — ${status}` : '';
+                    badgeText = `${journalVal}${yearStr}${statusStr}`;
+                } else if (status !== '') {
+                    badgeText = status;
+                }
+
+                let subtitleParts = [];
+                const authorsVal = (item.Authors || '').trim();
+                const volPagesVal = (item.Volume_Pages || '').trim();
+
+                if (authorsVal !== '' && authorsVal !== '-') subtitleParts.push(authorsVal);
+                if (journalVal !== '' && journalVal !== '-') subtitleParts.push(`<em>${journalVal}</em>`);
+                if (volPagesVal !== '' && volPagesVal !== '-') subtitleParts.push(volPagesVal);
+                
+                const subtitleText = subtitleParts.join(' — ');
+
+                let doiLink = '';
+                const doiVal = (item.DOI_URL || '').trim();
+                if (doiVal !== '' && doiVal !== '-') {
+                    doiLink = `<a href="${doiVal}" target="_blank" class="inline-flex items-center gap-1 text-xs text-blue-600 hover:underline mt-2 font-medium">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Link / DOI
+                    </a>`;
+                }
+
+                let cleanTitle = (item.Title || '').replace(//g, '-');
+
+                const card = `
+                <div class="p-4 rounded-lg border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-sm transition">
+                    <span class="text-xs font-bold ${badgeColor} border px-2.5 py-0.5 rounded-full inline-block">${badgeText}</span>
+                    <p class="font-semibold text-slate-900 text-base mt-2">${cleanTitle}</p>
+                    ${subtitleText ? `<p class="text-xs text-slate-600 mt-1">${subtitleText}</p>` : ''}
+                    ${doiLink}
+                </div>`;
+                container.innerHTML += card;
+            });
+        }
+
+        function renderWorkInProgress(data) {
+            const container = document.getElementById('WorkInProgress-container');
+            container.innerHTML = '';
+
+            if(!data || data.length === 0) {
+                container.innerHTML = '<p class="text-xs text-slate-400">No Work in Progress entries found.</p>';
+                return;
+            }
+
+            data.forEach(item => {
+                const status = (item.Status || 'In Pipeline').trim();
+                const badgeColor = 'text-amber-700 bg-amber-50 border-amber-200';
+                
+                const journalVal = (item.Journal_Conference || '').trim();
+                const yearVal = (item.Year || '').trim();
+
+                let badgeText = status;
+                if (journalVal !== '' && journalVal !== '-') {
+                    const yearStr = (yearVal !== '' && yearVal !== '-') ? ` (${yearVal})` : '';
+                    badgeText = `${journalVal}${yearStr} — ${status}`;
+                }
+
+                let subtitleParts = [];
+                const authorsVal = (item.Authors || '').trim();
+                const volPagesVal = (item.Volume_Pages || '').trim();
+
+                if (authorsVal !== '' && authorsVal !== '-') subtitleParts.push(authorsVal);
+                if (journalVal !== '' && journalVal !== '-') subtitleParts.push(`<em>${journalVal}</em>`);
+                if (volPagesVal !== '' && volPagesVal !== '-') subtitleParts.push(volPagesVal);
+                
+                const subtitleText = subtitleParts.join(' — ');
+
+                let cleanTitle = (item.Title || '').replace(//g, '-');
+
+                const card = `
+                <div class="p-4 rounded-lg border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-sm transition">
+                    <span class="text-xs font-bold ${badgeColor} border px-2.5 py-0.5 rounded-full inline-block">${badgeText}</span>
+                    <p class="font-semibold text-slate-900 text-base mt-2">${cleanTitle}</p>
+                    ${subtitleText ? `<p class="text-xs text-slate-600 mt-1">${subtitleText}</p>` : ''}
+                </div>`;
+                container.innerHTML += card;
+            });
+        }
+
+        function renderConferences(data) {
+            const container = document.getElementById('conferences-container');
+            container.innerHTML = '';
+
+            if(!data || data.length === 0) {
+                container.innerHTML = '<p class="text-xs text-slate-400 col-span-2">No conferences found.</p>';
+                return;
+            }
+
+            data.forEach(item => {
+                let cleanTitle = (item.Title || '').replace(//g, '-');
+                const card = `
+                <div class="p-4 bg-slate-50 rounded-lg border border-slate-200 text-xs">
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="font-bold text-blue-800">${item.Conference || ''}</span>
+                        <span class="bg-blue-100 text-blue-800 text-[10px] px-2 py-0.5 rounded font-semibold">${item.Status || 'Attended'}</span>
+                    </div>
+                    <p class="font-semibold text-slate-900 text-sm">${cleanTitle}</p>
+                    <p class="text-slate-500 mt-1">${item.Authors || ''} | ${item.Location || ''} (${item.Year || ''})</p>
+                </div>`;
+                container.innerHTML += card;
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+programming:
+  - name: "Python"
+    level: "Intermediate"
+  - name: "R"
+    level: "Intermediate"
+  - name: "C#"
+    level: "Intermediate"
+  - name: "C++"
+    level: "Intermediate"
+
+software:
+  - "SUMO (Simulation of Urban MObility)"
+  - "MATLAB & Simulink"
+  - "Unity 3D"
+  - "Arduino IDE"
+  - "IBM SPSS & Amos"
+  - "STATA"
+  - "AutoCAD"
+
+research_tools:
+  - "Pupil Core Wearable Eye Trackers"
+  - "VR Pedestrian Simulators"
+  - "Connected Driving Simulators"
+  - "Ultra-Wideband (UWB) Sensors"
+  - "Accelerated Failure Time (AFT) Survival Analysis"
+  - "Markov Entropy Modeling"
+  - "Interpretable Machine Learning"

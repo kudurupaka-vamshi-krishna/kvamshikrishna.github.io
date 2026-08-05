@@ -1,0 +1,27 @@
+- degree: "Ph.D. in Transportation Engineering"
+  institution: "Indian Institute of Technology Roorkee (IITR)"
+  location: "Roorkee, Uttarakhand, India"
+  period: "Aug 2020 – Dec 2025"
+  supervisor: "Prof. Pushpa Choudhary"
+  thesis: "BEHAVIOURAL ASSESSMENT OF DISTRACTED PEDESTRIANS AT INTERSECTIONS"
+  highlights:
+    - "Studied the effect of distraction activities on walking and visual behavior using VR pedestrian simulators and wearable eye-trackers."
+    - "Developed statistical, Markov, survival (Accelerated Failure Time), and machine learning models for risky/compensatory behavior."
+    - "Developed Haptic Alert Wristwatch System (HAWS) and Traffic Signal Actuated Illuminated Crosswalk (TSAIC)."
+
+- degree: "M.Tech in Transportation Engineering"
+  institution: "National Institute of Technology Rourkela (NITR)"
+  location: "Rourkela, Odisha, India"
+  period: "Jul 2018 – Jun 2020"
+  supervisor: "Prof. Prasanta Kumar Bhuyan"
+  gpa: "9.34 / 10"
+  thesis: "ANALYSING LATERAL GAP BEHAVIOR OF TWO WHEELERS IN HETEROGENEOUS TRAFFIC STREAM"
+  highlights:
+    - "Designed Dynamic Traffic Data Acquisition (DTDA) system measuring lateral gaps using ultrasonic sensors, cameras, and custom Android app with GPS logging."
+
+- degree: "B.Tech in Civil Engineering"
+  institution: "Guru Ghasidas Vishwavidyalaya (GGV Central University)"
+  location: "Bilaspur, Chhattisgarh, India"
+  period: "Aug 2014 – May 2018"
+  gpa: "7.7 / 10"
+  thesis: "An Experimental Study on Fly Ash Based Geopolymer Concrete"
