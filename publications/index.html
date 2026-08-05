@@ -114,6 +114,15 @@
         const WorkInProgress_CSV_URL = '../data/WorkInProgress.csv';
         const CONFERENCES_CSV_URL = '../data/conferences.csv';
 
+        // === PLACE SANITIZETEXT FUNCTION HERE ===
+        function sanitizeText(str) {
+            if (!str) return '';
+            return str
+                .replace(/\uFFFD/g, "'")    // Replace black diamond symbol  with standard apostrophe
+                .replace(/[’‘`']/g, "'")     // Standardize curly/smart apostrophes
+                .replace(/[“”"]/g, '"');     // Standardize smart quotes
+        }
+
         // Load Publications CSV
         Papa.parse(PUBLICATIONS_CSV_URL, {
             download: true,
