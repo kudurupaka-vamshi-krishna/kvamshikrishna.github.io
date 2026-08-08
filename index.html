@@ -62,41 +62,126 @@
     </header>
 
     <!-- Main Content -->
-    <main class="max-w-6xl mx-auto px-6 py-10 flex-grow w-full space-y-10">
-        <div class="bg-white rounded-xl p-8 border border-slate-200/80 shadow-sm space-y-4">
-            <h2 class="text-2xl font-bold text-slate-900 border-b pb-3 flex items-center gap-3">
-                <i class="fa-solid fa-user-gear text-blue-600"></i> Research Biography
-            </h2>
-            <p class="text-slate-700 leading-relaxed text-base">
-                I am working as a domain expert in <a href="https://www.viswire.com/" target="_blank" class="text-blue-600 font-semibold hover:underline">Viswire Simulation and Training Pvt. Ltd.</a> Prior to this I worked as an Institute Post-Doctoral Researcher at the <a href="https://www.iitb.ac.in/" target="_blank" class="text-blue-600 font-semibold hover:underline">Indian Institute of Technology (IIT) Bombay</a>. I completed my Ph.D. in Transportation Engineering from the <a href="https://www.iitr.ac.in/" target="_blank" class="text-blue-600 font-semibold hover:underline">Indian Institute of Technology (IIT) Roorkee</a> within the <a href="https://choudharypushpa.github.io/HumanFRSTLab/pages/team/faculty/pushpa.html" target="_blank" class="text-blue-600 hover:underline font-semibold">Human FRST Lab</a>, focusing on the  <strong> Behavioral Assessment of Distracted Pedestrians at Intersections </strong> .
-            </p>
-            <p class="text-slate-700 leading-relaxed text-base">
-                My core research passion lies at the intersection of human factors, active road safety, intelligent transportation systems (ITS), and external Human-Machine Interfaces (eHMIs). I combine cutting-edge empirical methodologies—such as Virtual Reality (VR) simulators, wearable eye trackers, Markov and predictive modeling, survival analysis, and machine learning—to design and deploy real-world assistive technologies.
-            </p>
-        </div>
+    <main class="max-w-6xl mx-auto px-6 py-10 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-8 items-start">
+            <aside class="space-y-6">
+                
+                <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+                    <!-- Profile Photo & Social Links Column -->
+                    <div class="flex flex-col items-center gap-4 flex-shrink-0">
+                        <div class="w-44 h-44 rounded-full overflow-hidden border-4 border-white shadow-md bg-slate-100">
+                            <img src="assets/images/profile.jpg" 
+                                alt="Dr. K. Vamshi Krishna" 
+                                class="w-full h-full object-cover"
+                                onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Vamshi+Krishna&size=200&background=1e293b&color=fff';">
+                        </div>
 
-        <div class="bg-white rounded-xl p-8 border border-slate-200/80 shadow-sm space-y-6">
-            <h2 class="text-2xl font-bold text-slate-900 border-b pb-3 flex items-center gap-3">
-                <i class="fa-solid fa-lightbulb text-amber-500"></i> Core Research Interests
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
-                    <h3 class="font-bold text-slate-900">Human Factors in Active and Passive Road Safety</h3>
-                    <!-- <p class="text-xs text-slate-600 mt-1">Pedestrian distraction, situational awareness, and surrogate safety measures (SSM).</p> -->
+                        <!-- Academic & Social Icons -->
+                        <div class="flex items-center gap-2.5 flex-wrap justify-center">
+                            <!-- Google Scholar -->
+                            <a href="https://scholar.google.com/citations?hl=en&authuser=3&user=eDJs5bAAAAAJ" target="_blank" title="Google Scholar" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-blue-600 hover:text-white text-slate-700 flex items-center justify-center transition shadow-sm">
+                                <i class="fa-solid fa-graduation-cap text-sm"></i>
+                            </a>
+                            <!-- ORCID -->
+                            <a href="https://orcid.org/0000-0002-1064-8260" target="_blank" title="ORCID ID" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-emerald-600 hover:text-white text-slate-700 flex items-center justify-center transition shadow-sm">
+                                <i class="fa-brands fa-orcid text-sm"></i>
+                            </a>
+                            <!-- ResearchGate -->
+                            <a href="https://www.researchgate.net/profile/Kudurupaka-Krishna" target="_blank" title="ResearchGate" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-teal-600 hover:text-white text-slate-700 flex items-center justify-center transition shadow-sm">
+                                <i class="fa-brands fa-researchgate text-sm"></i>
+                            </a>
+                            <!-- LinkedIn -->
+                            <a href="https://www.linkedin.com/in/kudurupaka-vamshi-krishna/" target="_blank" title="LinkedIn" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-blue-700 hover:text-white text-slate-700 flex items-center justify-center transition shadow-sm">
+                                <i class="fa-brands fa-linkedin-in text-sm"></i>
+                            </a>
+                            <!-- GitHub -->
+                            <a href="https://github.com/kudurupaka-vamshi-krishna" target="_blank" title="GitHub" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-700 flex items-center justify-center transition shadow-sm">
+                                <i class="fa-brands fa-github text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
-                    <h3 class="font-bold text-slate-900">ITS & Assistive Technologies in Decision Making</h3>
-                    <!-- <p class="text-xs text-slate-600 mt-1">Pedestrian Collision Avoidance Systems (PCAS) & Haptic Alert Wearables (HAWS).</p> -->
+
+                <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+                    <!-- Google Scholar Citation Metrics Bar -->
+                    <div class="grid grid-cols-1 gap-3">
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center">
+                                <i class="fa-solid fa-quote-right"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500">Total Citations</p>
+                                <h4 id="scholar-citations" class="text-xl font-extrabold text-slate-900">--</h4>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500">h-index</p>
+                                <h4 id="scholar-hindex" class="text-xl font-extrabold text-slate-900">--</h4>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500">i10-index</p>
+                                <h4 id="scholar-i10index" class="text-xl font-extrabold text-slate-900">--</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
-                    <h3 class="font-bold text-slate-900">External HMIs (eHMIs) and ADAS for Autonomous Vehicles</h3>
-                    <!-- <p class="text-xs text-slate-600 mt-1">Real-time driver/pedestrian communication displays and cross-cultural evaluation.</p> -->
+            </aside>
+
+            <!-- Right content -->
+            <section class="space-y-6">
+                <div class="bg-white rounded-xl p-8 border border-slate-200 shadow-sm">
+                    <div class="bg-white rounded-xl p-8 border border-slate-200/80 shadow-sm space-y-4">
+                        <!-- biography -->
+                        <h2 class="text-2xl font-bold text-slate-900 border-b pb-3 flex items-center gap-3">
+                            <i class="fa-solid fa-user-gear text-blue-600"></i> Research Biography
+                        </h2>
+                        <p class="text-slate-700 leading-relaxed text-base">
+                            I am working as a domain expert in <a href="https://www.viswire.com/" target="_blank" class="text-blue-600 font-semibold hover:underline">Viswire Simulation and Training Pvt. Ltd.</a> Prior to this I worked as an Institute Post-Doctoral Researcher at the <a href="https://www.iitb.ac.in/" target="_blank" class="text-blue-600 font-semibold hover:underline">Indian Institute of Technology (IIT) Bombay</a>. I completed my Ph.D. in Transportation Engineering from the <a href="https://www.iitr.ac.in/" target="_blank" class="text-blue-600 font-semibold hover:underline">Indian Institute of Technology (IIT) Roorkee</a> within the <a href="https://choudharypushpa.github.io/HumanFRSTLab/pages/team/faculty/pushpa.html" target="_blank" class="text-blue-600 hover:underline font-semibold">Human FRST Lab</a>, focusing on the  <strong> Behavioral Assessment of Distracted Pedestrians at Intersections </strong> .
+                        </p>
+                        <p class="text-slate-700 leading-relaxed text-base">
+                            My core research passion lies at the intersection of human factors, active road safety, intelligent transportation systems (ITS), and external Human-Machine Interfaces (eHMIs). I combine cutting-edge empirical methodologies—such as Virtual Reality (VR) simulators, wearable eye trackers, Markov and predictive modeling, survival analysis, and machine learning—to design and deploy real-world assistive technologies.
+                        </p>
+                    </div>
                 </div>
-                <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
-                    <h3 class="font-bold text-slate-900">VR, IoT, & Psycho-physiological Behaviour </h3>
-                    <!-- <p class="text-xs text-slate-600 mt-1">Connected driving simulators, gaze fixation mapping, and spatial trajectory logging.</p> -->
+
+                <div class="bg-white rounded-xl p-8 border border-slate-200 shadow-sm">
+                    <!-- interests -->
+                     <div class="bg-white rounded-xl p-8 border border-slate-200/80 shadow-sm space-y-6">
+                        <h2 class="text-2xl font-bold text-slate-900 border-b pb-3 flex items-center gap-3">
+                            <i class="fa-solid fa-lightbulb text-amber-500"></i> Core Research Interests
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                                <h3 class="font-bold text-slate-900">Human Factors in Active and Passive Road Safety</h3>
+                                <!-- <p class="text-xs text-slate-600 mt-1">Pedestrian distraction, situational awareness, and surrogate safety measures (SSM).</p> -->
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                                <h3 class="font-bold text-slate-900">ITS & Assistive Technologies in Decision Making</h3>
+                                <!-- <p class="text-xs text-slate-600 mt-1">Pedestrian Collision Avoidance Systems (PCAS) & Haptic Alert Wearables (HAWS).</p> -->
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                                <h3 class="font-bold text-slate-900">External HMIs (eHMIs) and ADAS for Autonomous Vehicles</h3>
+                                <!-- <p class="text-xs text-slate-600 mt-1">Real-time driver/pedestrian communication displays and cross-cultural evaluation.</p> -->
+                            </div>
+                            <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                                <h3 class="font-bold text-slate-900">VR, IoT, & Psycho-physiological Behaviour </h3>
+                                <!-- <p class="text-xs text-slate-600 mt-1">Connected driving simulators, gaze fixation mapping, and spatial trajectory logging.</p> -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>      
         </div>
     </main>
 
@@ -107,5 +192,33 @@
             <p>Designed for GitHub Pages & Netlify</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async function () {
+        try {
+            // TODO: Implement this endpoint in your backend.
+            // It should return JSON like:
+            // { "citations": "120+", "hIndex": "6", "i10Index": "4" }
+            const response = await fetch("/api/scholar-metrics");
+
+            if (!response.ok) {
+            throw new Error("Network response was not ok");
+            }
+
+            const data = await response.json();
+
+            const citationsEl = document.getElementById("scholar-citations");
+            const hIndexEl   = document.getElementById("scholar-hindex");
+            const i10El      = document.getElementById("scholar-i10index");
+
+            if (citationsEl) citationsEl.textContent = data.citations ?? "--";
+            if (hIndexEl)    hIndexEl.textContent    = data.hIndex ?? "--";
+            if (i10El)       i10El.textContent       = data.i10Index ?? "--";
+        } catch (err) {
+            console.error("Failed to load Scholar metrics:", err);
+            // Optional: keep placeholders or set a fallback value
+        }
+        });
+  </script>
 </body>
 </html>
