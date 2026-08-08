@@ -135,6 +135,10 @@
                             </div>
                         </div>
                     </div>
+                    <p id="scholar-updated-at"
+                        class="mt-3 text-[11px] text-slate-500 italic">
+                        <!-- Filled by JS -->
+                    </p>
                 </div>
             </aside>
 
@@ -194,31 +198,31 @@
     </footer>
 
     <script>
-        document.addEventListener("DOMContentLoaded", async function () {
+    document.addEventListener("DOMContentLoaded", async function () {
         try {
-            // TODO: Implement this endpoint in your backend.
-            // It should return JSON like:
-            // { "citations": "120+", "hIndex": "6", "i10Index": "4" }
-            const response = await fetch("/api/scholar-metrics");
+        const response = await fetch("/.netlify/functions/scholar-metrics");
 
-            if (!response.ok) {
+        if (!response.ok) {
             throw new Error("Network response was not ok");
-            }
-
-            const data = await response.json();
-
-            const citationsEl = document.getElementById("scholar-citations");
-            const hIndexEl   = document.getElementById("scholar-hindex");
-            const i10El      = document.getElementById("scholar-i10index");
-
-            if (citationsEl) citationsEl.textContent = data.citations ?? "--";
-            if (hIndexEl)    hIndexEl.textContent    = data.hIndex ?? "--";
-            if (i10El)       i10El.textContent       = data.i10Index ?? "--";
-        } catch (err) {
-            console.error("Failed to load Scholar metrics:", err);
-            // Optional: keep placeholders or set a fallback value
         }
-        });
-  </script>
+
+        const data = await response.json();
+
+        const citationsEl = document.getElementById("scholar-citations");
+        const hIndexEl   = document.getElementById("scholar-hindex");
+        const i10El      = document.getElementById("scholar-i10index");
+        const updatedEl  = document.getElementById("scholar-updated-at");
+
+        if (citationsEl) citationsEl.textContent = data.citations ?? "--";
+        if (hIndexEl)    hIndexEl.textContent    = data.hIndex ?? "--";
+        if (i10El)       i10El.textContent       = data.i10Index ?? "--";
+        if (updatedEl && data.updatedAt) {
+            updatedEl.textContent = "Updated on " + data.updatedAt;
+        }
+        } catch (err) {
+        console.error("Failed to load Scholar metrics:", err);
+        }
+    });
+</script>
 </body>
 </html>
