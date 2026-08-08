@@ -38,33 +38,6 @@
 
     <main class="max-w-6xl mx-auto px-6 py-10 flex-grow w-full space-y-10">
         
-        <!-- Research Citation Impact Summary -->
-        <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm space-y-4">
-            <div class="flex items-center justify-between border-b pb-3">
-                <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-                    <i class="fa-solid fa-graduation-cap text-blue-600"></i> Citation Impact (Google Scholar)
-                </h3>
-                <a href="https://scholar.google.com/" target="_blank" class="text-xs text-blue-600 hover:underline font-medium">
-                    View Profile <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                </a>
-            </div>
-            
-            <div class="grid grid-cols-3 gap-4 text-center">
-                <div class="p-3 bg-slate-50 rounded-lg">
-                    <span class="text-xs text-slate-500 block">Citations</span>
-                    <span id="research-citations" class="text-xl font-bold text-slate-900">--</span>
-                </div>
-                <div class="p-3 bg-slate-50 rounded-lg">
-                    <span class="text-xs text-slate-500 block">h-index</span>
-                    <span id="research-hindex" class="text-xl font-bold text-slate-900">--</span>
-                </div>
-                <div class="p-3 bg-slate-50 rounded-lg">
-                    <span class="text-xs text-slate-500 block">i10-index</span>
-                    <span id="research-i10index" class="text-xl font-bold text-slate-900">--</span>
-                </div>
-            </div>
-        </div>
-
         <div class="bg-gradient-to-br from-indigo-900 to-slate-900 text-white rounded-xl p-8 shadow-md space-y-6">
             <div class="flex items-center justify-between border-b border-indigo-700/60 pb-3">
                 <h2 class="text-2xl font-bold flex items-center gap-3"><i class="fa-solid fa-shield-halved text-amber-400"></i> Patents & Intellectual Property</h2>
@@ -126,32 +99,63 @@
                 </div>
             </div>
         </div>
+
+    
+        <!-- Research Citation Impact Summary -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200/80 shadow-sm space-y-4">
+            <div class="flex items-center justify-between border-b pb-3">
+                <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                    <i class="fa-solid fa-graduation-cap text-blue-600"></i> Citation Impact (Google Scholar)
+                </h3>
+                <a href="https://scholar.google.com/" target="_blank" class="text-xs text-blue-600 hover:underline font-medium">
+                    View Profile <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-3 gap-4 text-center">
+                <div class="p-3 bg-slate-50 rounded-lg">
+                    <span class="text-xs text-slate-500 block">Citations</span>
+                    <span id="research-citations" class="text-xl font-bold text-slate-900">--</span>
+                </div>
+                <div class="p-3 bg-slate-50 rounded-lg">
+                    <span class="text-xs text-slate-500 block">h-index</span>
+                    <span id="research-hindex" class="text-xl font-bold text-slate-900">--</span>
+                </div>
+                <div class="p-3 bg-slate-50 rounded-lg">
+                    <span class="text-xs text-slate-500 block">i10-index</span>
+                    <span id="research-i10index" class="text-xl font-bold text-slate-900">--</span>
+                </div>
+            </div>
+        </div>
     </main>
     <footer class="bg-slate-900 text-slate-400 text-xs py-8 border-t border-slate-800">
         <div class="max-w-6xl mx-auto px-6 text-center"><p>© 2026 Dr. K. Vamshi Krishna. All rights reserved.</p></div>
     </footer>
 
     <script>
-        // Update these numbers with your Google Scholar values (or fetch via proxy)
-        const SCHOLAR_STATS = {
-            citations: "120+", // Replace with your current citation count
-            hIndex: "6",      // Replace with your h-index
-            i10Index: "4"     // Replace with your i10-index
-        };
+        document.addEventListener("DOMContentLoaded", async function () {
+            try {
+            const response = await fetch("/.netlify/functions/scholar-metrics");
 
-        document.addEventListener("DOMContentLoaded", function() {
-            // Populate About page elements if present
-            if (document.getElementById('scholar-citations')) {
-                document.getElementById('scholar-citations').textContent = SCHOLAR_STATS.citations;
-                document.getElementById('scholar-hindex').textContent = SCHOLAR_STATS.hIndex;
-                document.getElementById('scholar-i10index').textContent = SCHOLAR_STATS.i10Index;
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
             }
 
-            // Populate Research page elements if present
-            if (document.getElementById('research-citations')) {
-                document.getElementById('research-citations').textContent = SCHOLAR_STATS.citations;
-                document.getElementById('research-hindex').textContent = SCHOLAR_STATS.hIndex;
-                document.getElementById('research-i10index').textContent = SCHOLAR_STATS.i10Index;
+            const data = await response.json();
+
+            const citationsEl = document.getElementById("scholar-citations");
+            const hIndexEl   = document.getElementById("scholar-hindex");
+            const i10El      = document.getElementById("scholar-i10index");
+            const updatedEl  = document.getElementById("scholar-updated-at");
+
+            if (citationsEl) citationsEl.textContent = data.citations ?? "--";
+            if (hIndexEl)    hIndexEl.textContent    = data.hIndex ?? "--";
+            if (i10El)       i10El.textContent       = data.i10Index ?? "--";
+            if (updatedEl && data.updatedAt) {
+                updatedEl.textContent = "Updated on " + data.updatedAt;
+            }
+            } catch (err) {
+            console.error("Failed to load Scholar metrics:", err);
             }
         });
     </script>
