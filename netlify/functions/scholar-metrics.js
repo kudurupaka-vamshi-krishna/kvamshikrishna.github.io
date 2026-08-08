@@ -6,7 +6,7 @@ const path = require("path");
 exports.handler = async function (event, context) {
   try {
     // Path relative to the repo root when built by Netlify
-    const metricsPath = path.join(__dirname, "..", "..", "data", "scholar_metrics.json");
+   const metricsPath = path.join(process.cwd(), "data", "scholar_metrics.json");
 
     const fileContents = fs.readFileSync(metricsPath, "utf-8");
     const metrics = JSON.parse(fileContents);
