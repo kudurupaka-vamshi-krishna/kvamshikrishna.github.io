@@ -1,4 +1,3 @@
 [build]
   publish = "."        # or "public" or "." depending on where your HTML is
-  command = ""
   functions = "netlify/functions"
